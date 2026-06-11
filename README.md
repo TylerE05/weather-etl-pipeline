@@ -198,4 +198,4 @@ Rate limit: ~1 request/second — handled via `time.sleep(2)` in the pipeline.
 
 **Tyler Estevez**
 Aspiring Data Engineer | UCF Computer Science
-[GitHub](https://github.com/YOUR_USERNAME) | [LinkedIn](https://linkedin.com/in/YOUR_USERNAME)
+[GitHub](https://github.com/TylerE05) | [LinkedIn](https://www.linkedin.com/in/tyler-estevez-4278b735a/)
