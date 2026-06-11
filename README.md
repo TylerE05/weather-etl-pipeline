@@ -39,14 +39,14 @@ weather-etl-pipeline/
 
 ```
 ┌─────────────────────┐     JSON      ┌──────────────────────┐      df       ┌────────────────────┐
-│      EXTRACT        │ ───────────▶  │      TRANSFORM        │ ───────────▶ │        LOAD        │
-│                     │               │                        │              │                    │
-│  Weatherstack API   │               │  pandas DataFrame      │              │  SQLite            │
-│  /current endpoint  │               │  • flatten JSON        │              │  weatherstack.db   │
-│  params: city,      │               │  • derive temp_f       │              │  table:            │
-│          access_key │               │  • derive feels_cold   │              │  weather_data      │
-│                     │               │  • add pipeline_run    │              │                    │
-└─────────────────────┘               └──────────────────────┘              └────────────────────┘
+│      EXTRACT        │ ───────────▶  │      TRANSFORM       │ ───────────▶ │        LOAD        │
+│                     │               │                      │               │                    │
+│  Weatherstack API   │               │  pandas DataFrame    │               │  SQLite            │
+│  /current endpoint  │               │  • flatten JSON      │               │  weatherstack.db   │
+│  params: city,      │               │  • derive temp_f     │               │  table:            │
+│          access_key │               │  • derive feels_cold │               │  weather_data      │
+│                     │               │  • add pipeline_run  │               │                    │
+└─────────────────────┘               └──────────────────────┘               └────────────────────┘
          ▲
          │  loops over CITIES list with 2s delay (rate limit)
          │
